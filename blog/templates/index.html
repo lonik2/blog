@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio aura</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔵</text></svg>">
+</head>
+<body>
+    <input type="checkbox" id="theme-toggle" class="theme-toggle-input">
+    <header class="topnav">
+        <nav aria-label="Navegación principal">
+            <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre mi</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contactos</a></li>
+            </ul>
+        </nav>
+        <label for="theme-toggle" class="theme-toggle-label" aria-label="Cambiar entre modo claro y oscuro">
+            <i class="bi bi-sun"></i>
+            <i class="bi bi-moon-stars"></i>
+        </label>
+    </header>
+
+    <main>
+        <section class="inicio" id="inicio">
+            <h1 class="inicio-nombre">
+                <span class="degrade">Lucas Onyszczyk</span>
+            </h1>
+            <p class="inicio-desc">portafolio</p>
+        </section>
+
+        <section class="sobre-mi" id="sobre-mi">
+            <h2 class="section-titulo">Sobre mi</h2>
+            <ul class="datos-lista">
+                <li> Nombre: Lucas Onyszczyk</li>
+                <li> Edad: 16 años</li>
+                <li> Curso: 4to año de secundaria</li>
+            </ul>
+
+            <h3 class="habilidades-titulo">Habilidades</h3>
+            <ul class="habilidades-lista">
+                <li class="burbuja"> Python</li>
+                <li class="burbuja"> MySQL</li>
+                <li class="burbuja"> HTML</li>
+                <li class="burbuja"> CSS</li>
+            </ul>
+        </section>
+
+        <section class="proyectos" id="proyectos">
+            <h2 class="section-titulo">Proyectos</h2>
+            <p class="section-sub">proyectos en lo que trabaje.</p>
+
+            <div class="proyectos-grid">
+                <article class="proyectos-cartas">
+                <img class="proyectos-img"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-UlvVWRHQo96qgw8Mbqa5OwBiEBAlqX25fX-LH1sONA&s=10"
+                    width="600" height="360" loading="lazy">
+                <div class="proyectos-body">
+                    <h3><i class="bi bi-spotify"></i> Spotify</h3>
+                    <p>Un proyecto en el que intente hacer una reproductor de musica.</p>
+                    <a class="proyectos-link" href="https://github.com/lonik2/spotify2" target="_blank" rel="noopener">
+                    Ver repo
+                    </a>
+                </div>
+                </article>
+
+                <article class="proyectos-cartas">
+                <img class="proyectos-img"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFcFsxXVDn8EuoKcj9xkPoTKbfUqUpxGU8R9c87s0K&s=10"
+                    width="600" height="360" loading="lazy">
+                <div class="proyectos-body">
+                    <h3><i class="bi bi-controller"></i> Pokémon</h3>
+                    <p>Trabajo práctico sobre Pokémon.</p>
+                    <a class="proyectos-link" href="https://github.com/lonik2/pokemonTP" target="_blank" rel="noopener">
+                    Ver repo
+                    </a>
+                </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="contacto" id="contacto">
+            <h2 class="section-titulo">Contacto</h2>
+
+            <ul class="contactos-grid">
+                <li><a class="contactos-carta" href="https://mail.google.com/mail/?view=cm&fs=1&to=lonyszczyk@alumno.huergo.edu.ar">
+                <i class="bi bi-envelope"></i><span>Email</span>
+                </a></li>
+                <li><a class="contactos-carta" href="https://www.instagram.com/lucasony_/" target="_blank" rel="noopener">
+                <i class="bi bi-instagram"></i><span>Instagram</span>
+                </a></li>
+                <li><a class="contactos-carta" href="https://www.tiktok.com/@lucas_ony365" target="_blank" rel="noopener">
+                <i class="bi bi-tiktok"></i><span>TikTok</span>
+                </a></li>
+                <li><a class="contactos-carta" href="https://github.com/lonik2" target="_blank" rel="noopener">
+                <i class="bi bi-github"></i><span>Github</span>
+                </a></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
