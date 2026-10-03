@@ -23,6 +23,6 @@ def pagina_inicio(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include("blog.urls")),
     path('', pagina_inicio, name='home'),
+    path('blog/', include('blog.urls')),
 ]
