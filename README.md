@@ -3,7 +3,8 @@ Este proyecto consiste en un portafolio que incluye un blog adentro del mismo. E
 requerimientos:
 - django 6.1.1
 - python 3.13.14
-
+- pillow
+  
 Para correr este repo se tiene que abrir la terminal y luego ejecutar los siguientes comandos en orden:
 - cd django_blog
 - python manage.py runserver
