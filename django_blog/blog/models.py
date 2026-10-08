@@ -29,3 +29,15 @@ class comment(models.Model):
 
     def __str__(self):
         return f"{self.author} on '{self.post}'"
+
+class postmedia(models.Model):
+    IMAGE, VIDEO, AUDIO = "image", "video", "audio"
+    KIND_CHOICES = [(IMAGE, "Imagen"), (VIDEO, "Video"), (AUDIO, "Audio")]
+
+    post = models.ForeignKey(post, on_delete=models.CASCADE, related_name="media")
+    kind = models.CharField(max_length=10, choices=KIND_CHOICES, default=IMAGE)
+    file = models.FileField(upload_to="posts/%Y/%m/")
+    caption = models.CharField(max_length=200, blank=True)
+
+    def __str__(self):
+        return f"{self.get_kind_display()} de {self.post.title}"

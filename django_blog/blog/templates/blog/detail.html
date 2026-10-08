@@ -13,7 +13,24 @@
         {% endfor %}
     </small>
     <p>{{ post.body | linebreaks }}</p>
-    
+
+    {% for item in post.media.all %}
+        <figure>
+            {% if item.kind == "image" %}
+                <img src="{{ item.file.url }}" alt="{{ item.caption }}" style="max-width:100%">
+            {% elif item.kind == "video" %}
+                <video controls style="max-width:100%">
+                    <source src="{{ item.file.url }}">
+                </video>
+            {% elif item.kind == "audio" %}
+                <audio controls src="{{ item.file.url }}"></audio>
+            {% endif %}
+            {% if item.caption %}
+                <figcaption>{{ item.caption }}</figcaption>
+            {% endif %}
+        </figure>
+    {% endfor %}
+
     <h3>Deja un comentario:</h3>
     <form method="post">
         {% csrf_token %}
