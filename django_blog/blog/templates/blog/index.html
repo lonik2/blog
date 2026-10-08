@@ -6,16 +6,24 @@
 {% block page_content %}
     {% block posts %}
         {% for post in posts %}
-            <h3><a href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a></h3>
-            <small>
-                {{ post.created_on.date }} | Categories:
-                {% for category in post.categories.all %}
-                    <a href="{% url 'blog_category' category.name %}">
-                        {{ category.name }}
+            <article class="post-card">
+                {% if post.cover %}
+                    <a href="{% url 'blog_detail' post.pk %}">
+                        <img src="{{ post.cover.url }}" alt="{{ post.title }}" class="post-cover">
                     </a>
-                {% endfor %}
-            </small>
-            <p>{{ post.body | slice:":400" }}...</p>
+                {% endif %}
+                <h3><a href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a></h3>
+                <small>
+                    {{ post.created_on.date }} | Categories:
+                    {% for category in post.categories.all %}
+                        <a href="{% url 'blog_category' category.name %}">
+                            {{ category.name }}
+                        </a>
+                    {% endfor %}
+                </small>
+                <p>{{ post.body | truncatewords:40 }}</p>
+                <a href="{% url 'blog_detail' post.pk %}">Leer más →</a>
+            </article>
         {% endfor %}
     {% endblock posts %}
 {% endblock page_content %}

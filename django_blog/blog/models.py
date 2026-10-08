@@ -17,6 +17,7 @@ class post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
     categories = models.ManyToManyField("category", related_name="posts")
+    cover = models.ImageField(upload_to="covers/", blank=True, null=True)
 
     def __str__(self):
         return self.title
